@@ -8,3 +8,5 @@ class CourseForm(FlaskForm):
     price = IntegerField('Price', validators=[InputRequired()])
     level = RadioField('Level',choices=['Beginner', 'Intermediate', 'Advanced'],validators=[InputRequired()])
     available = BooleanField('Available', default='checked')
+
+

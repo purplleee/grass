@@ -21,8 +21,7 @@ def index():
     if form.validate_on_submit():
         conn = get_db_connection()
         try:
-            cursor = conn.cursor()
-            dictionary=True
+            cursor = conn.cursor()# dictionary=True
             cursor.execute('''INSERT INTO courses (title, description, price, available, level) 
                               VALUES (%s, %s, %s, %s, %s)''',
                            (form.title.data, form.description.data, form.price.data, 
